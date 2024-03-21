@@ -17,6 +17,9 @@ const storage = multer.diskStorage({
 export const uploadMulter = multer({
   dest: './uploads/',
   storage,
+  limits: {
+    fileSize: 4000000,
+  },
 });
 const uploadImage = async (
   req: Request,

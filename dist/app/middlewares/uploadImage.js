@@ -30,6 +30,9 @@ const storage = multer_1.default.diskStorage({
 exports.uploadMulter = (0, multer_1.default)({
     dest: './uploads/',
     storage,
+    limits: {
+        fileSize: 4000000,
+    },
 });
 const uploadImage = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
